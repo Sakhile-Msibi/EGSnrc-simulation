@@ -1,6 +1,6 @@
 In EGS_Application::initSimulation()
 ================================================================================
-EGSnrc version 4 for x86_64-unknown-linux-gnu          Fri Dec 18 15:28:16 2020
+EGSnrc version 4 for x86_64-unknown-linux-gnu          Mon Dec 21 10:20:14 2020
 ================================================================================
 configuration...............................................linux
 user code...................................................tutor7pp
@@ -199,41 +199,52 @@ H2O521ICRU  1.00
 *******************************************
 
 
+Particle Track Scoring (tracker)
+======================================================
+ - Scoring photon tracks       = YES
+ - Scoring electron tracks     = YES
+ - Scoring positron tracks     = YES
+ - First event to score        = 0
+ - Last event to score         = 1024
+ - Track buffer size           = 1024
+ - Output file name            = /home/sakhile/EGSnrc/egs_home/tutor7pp/project.ptracks
 
 
 
-Starting simulation on Fri Dec 18 15:28:17 2020
-
-    Fresh simulation of 1000000 histories
 
 
+Starting simulation on Mon Dec 21 10:20:14 2020
 
-Running 1000000 histories
+    Fresh simulation of 10000 histories
+
+
+
+Running 10000 histories
 
   Batch             CPU time        Result   Uncertainty(%)
 ==========================================================
-      1               10.56     0.00891125           0.99
-      2               20.34      0.0088956           0.69
-      3               30.13     0.00890965           0.57
-      4               39.90     0.00886528           0.49
-      5               51.08      0.0088666           0.44
-      6               61.05     0.00884929           0.40
-      7               71.53     0.00886652           0.37
-      8               83.11     0.00886265           0.35
-      9               94.76     0.00886175           0.33
-     10              105.95     0.00886097           0.31
+      1                0.11     0.00745127          10.32
+      2                0.22     0.00767834           7.30
+      3                0.32     0.00786543           5.71
+      4                0.44     0.00787695           4.84
+      5                0.56      0.0083515           4.28
+      6                0.70     0.00858152           3.86
+      7                0.81     0.00846834           3.58
+      8                0.91     0.00861047           3.45
+      9                1.04     0.00854859           3.23
+     10                1.15     0.00853487           3.06
 
 
 Finished simulation
 
-Total cpu time for this run:            105.95 (sec.) 0.0294(hours)
-Histories per hour:                     3.39783e+07   
-Number of random numbers used:          1448969862    
-Number of electron CH steps:            7.07477e+07   
-Number of all electron steps:           7.14487e+07   
+Total cpu time for this run:            1.16 (sec.) 0.0003(hours)
+Histories per hour:                     3.10345e+07   
+Number of random numbers used:          14397368      
+Number of electron CH steps:            702888        
+Number of all electron steps:           710016        
 
 
- last case = 34651561 Etot = 6e+06
+ last case = 345697 Etot = 60000
 
 
 ======================================================
@@ -241,37 +252,45 @@ Number of all electron steps:           7.14487e+07
 ======================================================
 The first and last items in the following list of energy fractions are the reflected and transmitted energy, respectively. These two values are only meaningful if the source is directed in the positive z-direction. The remaining values are the deposited energy fractions in the regions of the geometry, but notice that the identifying index is the region number offset by 1 (ir+1).
 
-ir+1 | Reflected, deposited, or transmitted energy fraction for 34651561 particles:
+ir+1 | Reflected, deposited, or transmitted energy fraction for 345697 particles:
 
-  0  8.861015e-03 +/- 2.757124e-05  
-  1  3.811620e-01 +/- 5.699934e-04  
-  2  2.441322e-06 +/- 6.943968e-08  
-  3  6.099745e-01 +/- 7.445759e-04  
+  0  8.538564e-03 +/- 2.609802e-04  
+  1  3.786144e-01 +/- 5.674841e-03  
+  2  2.490255e-06 +/- 6.455039e-07  
+  3  6.128446e-01 +/- 7.460584e-03  
 
 ======================================================
 Dose Scoring Object(my_dose_scoring)
 ======================================================
-=> last case = 34651561 fluence = 3.46516e+07
+=> last case = 345697 fluence = 345697
 
 
 ==> Summary of region dosimetry (per particle)
 ir medium       rho/[g/cm3]  V/cm3      Edep/[MeV]              D/[Gy]            
 ----------------------------------------------------------------------------------
-0 H2O521ICRU   1.000   625.0000 6.5999e-02 +/- 0.150  % 1.6917e-14 +/- 0.150  %
-1 AIR521ICRU   0.001   625.0000 4.2272e-07 +/- 2.844  % 8.9933e-17 +/- 2.844  %
+0 H2O521ICRU   1.000   625.0000 6.5713e-02 +/- 1.499  % 1.6844e-14 +/- 1.499  %
+1 AIR521ICRU   0.001   625.0000 4.3221e-07 +/- 25.921 % 9.1953e-17 +/- 25.921 %
 ----------------------------------------------------------------------------------
 
 ======================================================
+
+Particle Track Scoring (tracker)
+======================================================
+   Total events scored:     27
+   Total tracks scored:     576
+   Still being scored:      0
+   Output file name:        /home/sakhile/EGSnrc/egs_home/tutor7pp/project.ptracks
+
 
 
 ================================================================================
 Finished simulation
 
-  Elapsed time:                  119.1 s (  0.033 h)
-  CPU time:                      106.2 s (  0.030 h)
-  Ratio:                          1.121
+  Elapsed time:                    2.2 s (  0.001 h)
+  CPU time:                        1.3 s (  0.000 h)
+  Ratio:                          1.616
 
 
-End of run                                             Fri Dec 18 15:30:15 2020
+End of run                                             Mon Dec 21 10:20:16 2020
 ================================================================================
 finishSimulation(tutor7pp) 0

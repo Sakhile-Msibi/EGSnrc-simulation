@@ -51,6 +51,16 @@
         region done = yes
         name = my_dose_scoring
     :stop ausgab object:
+    :start ausgab object:
+        library = egs_track_scoring
+        name = tracker
+        score electrons = yes
+        score positrons = yes
+        score photons = yes
+        # start scoring = 0 # default is 0
+        # stop scoring = 1024 # default is 1024
+        # buffer size = 1024 # default is 1024
+    :stop ausgab object:
 
 :stop ausgab object definition:
 
