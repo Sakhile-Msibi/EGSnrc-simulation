@@ -1,0 +1,59 @@
+:start geometry definition:
+
+    :start geometry:
+        library = egs_box
+        name = the_detector
+        box size = 25 25 1
+        :start media input:
+            media = AIR521ICRU
+        :stop media input:
+    :stop geometry:
+    :start geometry:
+        library = egs_box
+        box size = 50 50 41.5
+        name = water_box
+        :start media input:
+            media = H2O521ICRU
+        :stop media input:
+    :stop geometry:
+    :start geometry:
+        library  = egs_genvelope
+        name = box_with_chambers
+        base geometry = water_box
+        inscribed geometries = the_detector
+    :stop geometry:
+    
+    simulation geometry = box_with_chambers
+:stop geometry definition:
+
+:start source definition:
+
+    :start source:
+        library = egs_point_source
+        name = the_point_source
+        position = 0, 0, -100
+        :start spectrum:
+            type = monoenergetic
+            energy = 6
+        :stop spectrum:
+        charge = 0
+    :stop source:
+
+    simulation source = the_point_source
+
+:stop source definition:
+
+:start ausgab object definition:
+
+    :start ausgab object:
+        library = egs_dose_scoring
+        volume = 625
+        region done = yes
+        name = my_dose_scoring
+    :stop ausgab object:
+
+:stop ausgab object definition:
+
+:start run control:
+    ncase = 10000
+:stop run control:

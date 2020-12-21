@@ -1,0 +1,277 @@
+In EGS_Application::initSimulation()
+================================================================================
+EGSnrc version 4 for x86_64-unknown-linux-gnu          Fri Dec 18 15:28:16 2020
+================================================================================
+configuration...............................................linux
+user code...................................................tutor7pp
+pegs file...................................................521icru on HEN_HOUSE
+using host..................................................ubuntu
+input file..................................................project
+output file(s)..............................................project
+================================================================================
+
+               ***************************************************
+               *                                                 *
+               *                  tutor7pp                       *
+               *                                                 *
+               ***************************************************
+
+This is Tutor7_Application   based on
+      EGS_AdvancedApplication  
+
+In initCrossSections(): spin effects = 1
+ ===> Photonuclear flag:   0
+ RAYLEIGH OPTION REQUESTED FOR MEDIUM NUMBER  1
+
+ RAYLEIGH OPTION REQUESTED FOR MEDIUM NUMBER  2
+
+ Found medium with gas pressure
+
+***************** Warning: 
+ IN HATCH: REQUESTED RAYLEIGH OPTION FOR MEDIUM  1
+ BUT RAYLEIGH DATA NOT INCLUDED IN PEGS4 FILE.
+ Rayleigh data available for medium  2 in PEGS4 data set.
+
+(Re)-initializing photon cross sections with files from the series: xcom
+
+ Compton cross sections: default
+ Using Compton cross sections from /home/sakhile/EGSnrc/HEN_HOUSE/data/compton_sigma.data
+ Working on medium   1 ... 
+  ->  100 atomic ff values computed!
+      preparing data for Rayleigh sampling ... done
+
+OK
+ Working on medium   2 ... 
+  ->  100 atomic ff values computed!
+      preparing data for Rayleigh sampling ... done
+
+OK
+
+Reading screened Rutherford MS data ...............  done 
+
+
+Reading spin data base from /home/sakhile/EGSnrc/HEN_HOUSE/data/spinms.data
+EGSnrc spin data, version 2.0   
+Data generated on a machine with 1234 endianess
+The endianess of this CPU is 1234
+Ranges:      1.00   100.00  0.30054  1.00000
+
+
+  medium    1 .....................  done
+  medium    2 .....................  done
+  
+  Medium            1  sige =    6.4595132015164030        6.2354615343201143       monotone =  F F
+  Medium            2  sige =    6.3784170227787529        6.1807995067678911       monotone =  F F
+  
+  Initializing tmxs for estepe =   0.25000000000000000       and ximax =   0.50000000000000000     
+  
+
+Bound Compton scattering requested, reading data ......  Done
+
+ Initializing Bound Compton scattering ......
+ Medium   1 has  18 shells: 
+   1   10   1  0.00004 0.210E+02     0.285
+   2   11   2  0.00004 0.110E+03     0.011
+   3   12   3  0.00004 0.669E+02     0.011
+   4   13   1  0.21603 0.178E+02     0.410
+   5   14   2  0.21603 0.921E+02     0.015
+   6   15   3  0.21603 0.558E+02     0.014
+   7   16   4  0.10801 0.558E+02     0.014
+   8   17   1  0.05805 0.155E+02     0.543
+   9   18   2  0.05805 0.793E+02     0.024
+  10   19   3  0.05805 0.479E+02     0.014
+  11   20   4  0.05805 0.479E+02     0.014
+  12   72   1  0.00129 0.671E+01     3.203
+  13   73   2  0.00129 0.271E+02     0.326
+  14   74   3  0.00129 0.142E+02     0.251
+  15   75   4  0.00257 0.142E+02     0.249
+  16   76   5  0.00129 0.889E+02     0.029
+  17   77   6  0.00129 0.606E+02     0.016
+  18   78   7  0.00257 0.606E+02     0.016
+ Medium   2 has   5 shells: 
+   1    1   1  0.20000 0.116E+03     0.014
+   2   17   1  0.20000 0.155E+02     0.543
+   3   18   2  0.20000 0.793E+02     0.024
+   4   19   3  0.20000 0.479E+02     0.014
+   5   20   4  0.20000 0.479E+02     0.014
+ ...... Done.
+
+Output from subroutine EDGSET:
+==============================
+ Atomic relaxations requested! 
+
+ Reading simplified photo-absorption data ..... Done
+
+ Reading simplified relaxation data ..... Done
+
+ Reading parametrized XCOM photo cross section data ..... Done
+
+ Reading EADL relaxation data ......
+  Z =   6 has  4 shells
+  Z =   7 has  4 shells
+  Z =   8 has  4 shells
+  Z =  18 has  7 shells
+  Z =   1 has  1 shells
+ ...... Done.
+
+EGSnrc SUCCESSFULLY 'HATCHED' FOR     2 MEDIA.
+
+
+The following media are defined:
+================================
+
+  0  AIR521ICRU               AE= 0.5210 AP= 0.0100 0
+  1  H2O521ICRU               AE= 0.5210 AP= 0.0100 1
+
+
+Transport parameter and cross section options:
+==============================================
+Photon cross sections                             xcom            
+Compton cross sections                            default         
+Global Pcut                                       0.01
+Pair cross sections                               BH
+Pair angular sampling                             Simple
+Triplet production                                Off
+Bound Compton scattering                          norej
+Radiative Compton corrections                     Off
+Rayleigh scattering                               On
+Atomic relaxations                                On
+Photoelectron angular sampling                    On
+Photonuclear attenuation                          Off
+Photonuclear cross sections                       default         
+
+Global Ecut                                       0.521
+Brems cross sections                              BH
+Brems angular sampling                            KM
+Spin effects                                      On
+Electron Impact Ionization                        Off             
+Global Smax                                       1e+10
+ESTEPE                                            0.25
+Ximax                                             0.5
+Boundary crossing algorithm                       Exact
+Skin depth for BCA                                3
+Electron-step algorithm                           EGSnrc
+==============================================
+
+
+
+======================== geometry =====================
+ type = EGS_EnvelopeGeometry
+ name = box_with_chambers
+ number of regions = 2
+ base geometry = water_box (type EGS_Box)
+ inscribed geometries:
+   the_detector (type EGS_Box)
+=======================================================
+
+
+The simulation uses the following source:
+=========================================
+ Point source with monoenergetic 6 MeV, photons
+
+
+Random number generator:
+============================================
+  type                = ranmar
+  high resolution     = no
+  initial seeds       = 33 97
+  numbers used so far = 0
+
+
+The following ausgab objects are included in the simulation
+===========================================================
+
+
+*******************************************
+Dose Scoring Object (my_dose_scoring)
+*******************************************
+
+ - Regions in dose calculator :2
+
+
+--------------------------------------
+medium       rho/[g/cm**3]
+--------------------------------------
+AIR521ICRU  0.00
+H2O521ICRU  1.00
+--------------------------------------
+
+*******************************************
+
+
+
+
+
+Starting simulation on Fri Dec 18 15:28:17 2020
+
+    Fresh simulation of 1000000 histories
+
+
+
+Running 1000000 histories
+
+  Batch             CPU time        Result   Uncertainty(%)
+==========================================================
+      1               10.56     0.00891125           0.99
+      2               20.34      0.0088956           0.69
+      3               30.13     0.00890965           0.57
+      4               39.90     0.00886528           0.49
+      5               51.08      0.0088666           0.44
+      6               61.05     0.00884929           0.40
+      7               71.53     0.00886652           0.37
+      8               83.11     0.00886265           0.35
+      9               94.76     0.00886175           0.33
+     10              105.95     0.00886097           0.31
+
+
+Finished simulation
+
+Total cpu time for this run:            105.95 (sec.) 0.0294(hours)
+Histories per hour:                     3.39783e+07   
+Number of random numbers used:          1448969862    
+Number of electron CH steps:            7.07477e+07   
+Number of all electron steps:           7.14487e+07   
+
+
+ last case = 34651561 Etot = 6e+06
+
+
+======================================================
+ Energy fractions
+======================================================
+The first and last items in the following list of energy fractions are the reflected and transmitted energy, respectively. These two values are only meaningful if the source is directed in the positive z-direction. The remaining values are the deposited energy fractions in the regions of the geometry, but notice that the identifying index is the region number offset by 1 (ir+1).
+
+ir+1 | Reflected, deposited, or transmitted energy fraction for 34651561 particles:
+
+  0  8.861015e-03 +/- 2.757124e-05  
+  1  3.811620e-01 +/- 5.699934e-04  
+  2  2.441322e-06 +/- 6.943968e-08  
+  3  6.099745e-01 +/- 7.445759e-04  
+
+======================================================
+Dose Scoring Object(my_dose_scoring)
+======================================================
+=> last case = 34651561 fluence = 3.46516e+07
+
+
+==> Summary of region dosimetry (per particle)
+ir medium       rho/[g/cm3]  V/cm3      Edep/[MeV]              D/[Gy]            
+----------------------------------------------------------------------------------
+0 H2O521ICRU   1.000   625.0000 6.5999e-02 +/- 0.150  % 1.6917e-14 +/- 0.150  %
+1 AIR521ICRU   0.001   625.0000 4.2272e-07 +/- 2.844  % 8.9933e-17 +/- 2.844  %
+----------------------------------------------------------------------------------
+
+======================================================
+
+
+================================================================================
+Finished simulation
+
+  Elapsed time:                  119.1 s (  0.033 h)
+  CPU time:                      106.2 s (  0.030 h)
+  Ratio:                          1.121
+
+
+End of run                                             Fri Dec 18 15:30:15 2020
+================================================================================
+finishSimulation(tutor7pp) 0
